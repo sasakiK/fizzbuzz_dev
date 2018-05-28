@@ -1,3 +1,7 @@
+# Author      : sasaki k
+# reference   : http://inokara.hateblo.jp/entry/2017/10/01/153513
+
+
 import unittest
 from fizzbuzz import fizzbuzz
 
