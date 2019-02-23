@@ -13,8 +13,33 @@ def fizzbuzz(num):
     else:
         return str(num)
 
+def type_check(num):
+    # stringをintに変換する
+    if type(num)=="str":
+        return int(num)
+    else:
+        return num
+
+
+def fizzbuzz_prod(num, cond_fizz=3, cond_buzz=5):
+
+    num = type_check(num)
+
+    cond_fizz = (num % cond_fizz ==0)
+    cond_buzz = (num % cond_buzz ==0)
+    cond_fizzbuzz = cond_fizz and cond_buzz
+
+    if cond_fizzbuzz:
+        return 'FizzBuzz'
+    elif cond_buzz:
+        return 'Buzz'
+    elif cond_fizz:
+        return 'Fizz'
+    else:
+        return num
+
 
 if __name__ == '__main__':
 
     for num in range(1, 21):
-        print(fizzbuzz(num))
+        print(fizzbuzz_prod(num))
